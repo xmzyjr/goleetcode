@@ -21,16 +21,19 @@ func ordinalOfDate(date string) int {
 	}
 	var count int
 	if i1%400 == 0 || (i1%4 == 0 && i1%100 != 0) {
-		for i := 1; i < i2; i++ {
-			count += days1[i]
-		}
-		count += i3
+		count = getNum(days1, i2, i3)
 	} else {
-		for i := 1; i < i2; i++ {
-			count += days[i]
-		}
-		count += i3
+		count = getNum(days, i2, i3)
 	}
 	return count
 
+}
+
+func getNum(day []int, i2 int, i3 int) int {
+	count := 0
+	for i := 1; i < i2; i++ {
+		count += day[i]
+	}
+	count += i3
+	return count
 }
