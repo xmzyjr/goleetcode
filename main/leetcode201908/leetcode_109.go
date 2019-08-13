@@ -7,11 +7,11 @@ type ListNode struct {
 	Next *ListNode
 }
 
-type TreeNode struct {
-	Val   int
-	Left  *TreeNode
-	Right *TreeNode
-}
+//type TreeNode struct {
+//	Val   int
+//	Left  *TreeNode
+//	Right *TreeNode
+//}
 
 func sortedListToBST(head *ListNode) *TreeNode {
 	if head == nil {
